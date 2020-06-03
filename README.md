@@ -23,8 +23,10 @@ Things you may want to cover:
 
 * ...
 
-## groups_usersテーブル
-
+###### DB設計
+---------------------------------------
+## users table
+---------------------------------------
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, unique: true|
