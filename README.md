@@ -23,4 +23,44 @@ Things you may want to cover:
 
 * ...
 
-test
+###### DB設計
+---------------------------------------
+## users table
+|Column|Type|Options|
+|------|----|-------|
+|email|string|null: false|
+|password|string|null: false|
+|username|string|null: false|
+### Association
+- has many :groupes, through: members
+- has many :messages
+- has many :members
+
+## users_groupes table
+|Column|Type|Options|
+|------|----|-------|
+|groupes_id|integer|null: false, foreign_key: true|
+|users_id|integer|null: false, foreign_key: true|
+### Association
+- belongs to :grope
+- belongs to :user
+
+## group table
+|Column|Type|Options|
+|------|----|-------|
+|id|groupe_name|
+|user_id|
+### Association
+- has many :groupes 
+-belongs_to :user
+
+## comments table
+|id|text|image|user_id||
+|------|----|-------|
+|image|text||
+|text|text||
+### Association
+- belongs_to :user
+- has many :comments
+--------------------------------------
+
