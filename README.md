@@ -23,6 +23,7 @@ Things you may want to cover:
 
 * ...
 
+<<<<<<< HEAD
 ###### DB設計
 ---------------------------------------
 ## users table
@@ -63,3 +64,6 @@ Things you may want to cover:
 - belongs_to :user
 - has many :comments
 ---------------------------
+=======
+test
+>>>>>>> parent of eb67644... Merge pull request #1 from midoridaichi/README
