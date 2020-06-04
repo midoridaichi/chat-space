@@ -30,7 +30,8 @@ Things you may want to cover:
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
-|username|string|null: false|
+|name|string|null: false|
+
 ### Association
 - has many :groupes, through: members
 - has many :messages
@@ -44,15 +45,15 @@ Things you may want to cover:
 ### Association
 - belongs to :grope
 - belongs to :user
+- has many :groupes, through:users
 
 ## group table
 |Column|Type|Options|
 |------|----|-------|
 |id|groupe_name|
-|user_id|
+|user_id|users_name|
 ### Association
-- has many :groupes 
--belongs_to :user
+- has many :groupes
 
 ## comments table
 |id|text|image|user_id||
