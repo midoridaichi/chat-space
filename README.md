@@ -42,7 +42,7 @@ Things you may want to cover:
 |user_id|
 ### Association
 - has many :groupes 
--belongs_to :user
+- belongs_to :user
 
 ## comments table
 |id|text|image|user_id||
