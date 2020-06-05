@@ -30,10 +30,10 @@ Things you may want to cover:
 ## users_groups table
 |Column|Type|Options|
 |------|----|-------|
-|groupes_id|integer|null: false, foreign_key: true|
-|users_id|integer|null: false, foreign_key: true|
+|groupe_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs to :grope
+- belongs to :group
 - belongs to :user
 
 ## groups table
