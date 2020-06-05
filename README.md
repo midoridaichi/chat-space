@@ -12,7 +12,7 @@ Things you may want to cover:
 * Configuration
 
 * Database creation
-<<<<<<< HEAD
+
 ###### DB設計
 ---------------------------------------
 ## users table
