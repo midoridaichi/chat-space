@@ -20,13 +20,13 @@ Things you may want to cover:
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
-|username|string|null: false|
+|name|string|null: false|
 ### Association
 - has many :groupes, through: members
 - has many :messages
-- has many :members
+- has many :users_grops
 
-## users_groupes table
+## users_groups table
 |Column|Type|Options|
 |------|----|-------|
 |groupes_id|integer|null: false, foreign_key: true|
@@ -35,13 +35,13 @@ Things you may want to cover:
 - belongs to :grope
 - belongs to :user
 
-## group table
+## groups table
 |Column|Type|Options|
 |------|----|-------|
 |id|groupe_name|
 |user_id|
 ### Association
-- has many :groupes 
+- has many :groups 
 - belongs_to :user
 
 ## messages table
@@ -51,7 +51,7 @@ Things you may want to cover:
 |text|text||
 ### Association
 - belongs_to :user
-- has many :comments
+- has many :messages
 ---------------------------
 * Database initialization
 
