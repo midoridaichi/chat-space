@@ -39,8 +39,8 @@ Things you may want to cover:
 ## groups table
 |Column|Type|Options|
 |------|----|-------|
-|id|groupe_name|
-|user_id|
+|id|text|
+|user_id|text|
 ### Association
 - has many :groups 
 - belongs_to :user
