@@ -44,7 +44,7 @@ Things you may want to cover:
 - has many :groupes 
 - belongs_to :user
 
-## comments table
+## messages table
 |id|text|image|user_id||
 |------|----|-------|
 |image|text||
