@@ -31,8 +31,8 @@ Things you may want to cover:
 ## users_groups table
 |Column|Type|Options|
 |------|----|-------|
-|null: false, t.references :group, index:true, foreign_key: true|
-|null: false, t.references :message, index:true, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :group
 - belongs_to :user
@@ -41,8 +41,7 @@ Things you may want to cover:
 ## groups table
 |Column|Type|Options|
 |------|----|-------|
-|string|
-|string|
+|name|string||
 ### Association
 - has_many :users, through: :users_groups
 - has_many :users_groups
@@ -53,8 +52,8 @@ Things you may want to cover:
 |------|----|-------|
 |image|text|
 |text|text|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :group
