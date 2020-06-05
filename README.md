@@ -62,5 +62,19 @@ Things you may want to cover:
 |text|text||
 ### Association
 - belongs_to :user
+<<<<<<< Updated upstream
 - has many :messages
 -------------------------
+=======
+- has many :comments
+---------------------------
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...　
+>>>>>>> Stashed changes
