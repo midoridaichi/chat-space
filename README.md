@@ -64,6 +64,7 @@ Things you may want to cover:
 - belongs_to :user
 - has many :messages
 -------------------------
+
 * Database initialization
 
 * How to run the test suite
