@@ -23,18 +23,18 @@ Things you may want to cover:
 |password|string|null: false|
 |name|string|null: false|
 ### Association
-- has many :groupes, through: users_groups
-- has many :messages
-- has many :users_grops
+- has_many :groups, through: users_groups
+- has_many :messages
+- has_many :users_groups
 
 ## users_groups table
 |Column|Type|Options|
 |------|----|-------|
-|groupe_id|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+|name|integer|null: false, foreign_key: true|
 ### Association
-- belongs to :group
-- belongs to :user
+- belongs_to :group
+- belongs_to :user
 
 ## groups table
 |Column|Type|Options|
@@ -42,17 +42,18 @@ Things you may want to cover:
 |id|string|
 |user_id|string|
 ### Association
-- has many :groups 
+- has_many :groups, through: users_groups
 - belongs_to :user
 
 ## messages table
-|id|text|image|user_id||
+|id|text|image|user_id|
 |------|----|-------|
-|image|text||
-|text|text||
+|image|text|
+|text|text|
 ### Association
 - belongs_to :user
-- has many :messages
+- belongs_to :group
+
 ---------------------------
 * Database initialization
 
