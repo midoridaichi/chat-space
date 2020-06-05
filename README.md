@@ -27,29 +27,33 @@ Things you may want to cover:
 - has_many :messages
 - has_many :users_groups
 
+
 ## users_groups table
 |Column|Type|Options|
 |------|----|-------|
 |group_id|integer|null: false, foreign_key: true|
-|name|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :group
 - belongs_to :user
+
 
 ## groups table
 |Column|Type|Options|
 |------|----|-------|
 |id|string|
-|user_id|string|
+|name|string|
 ### Association
-- has_many :groups, through: users_groups
-- belongs_to :user
+- has_many :users, through: users_groups
+
 
 ## messages table
 |id|text|image|user_id|
 |------|----|-------|
 |image|text|
 |text|text|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :group
