@@ -33,19 +33,19 @@ Things you may want to cover:
 |name|string|null: false|
 
 ### Association
-- has many :groupes, through: members
+- has many :groupes, through: users_groups
 - has many :messages
-- has many :members
+- has many :users_groups
 
-## users_groupes table
+## users_groups table
 |Column|Type|Options|
 |------|----|-------|
-|groupes_id|integer|null: false, foreign_key: true|
-|users_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs to :grope
+- belongs to :group
 - belongs to :user
-- has many :groupes, through:users
+- has many :groupes, through:users_groups
 
 ## group table
 |Column|Type|Options|
@@ -53,14 +53,14 @@ Things you may want to cover:
 |id|groupe_name|
 |user_id|users_name|
 ### Association
-- has many :groupes
+- has many :groups
 
-## comments table
+## messages table
 |id|text|image|user_id||
 |------|----|-------|
 |image|text||
 |text|text||
 ### Association
 - belongs_to :user
-- has many :comments
+- has many :messages
 --------------------------
