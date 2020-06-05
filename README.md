@@ -23,7 +23,7 @@ Things you may want to cover:
 |password|string|null: false|
 |name|string|null: false|
 ### Association
-- has many :groupes, through: members
+- has many :groupes, through: users_groups
 - has many :messages
 - has many :users_grops
 
