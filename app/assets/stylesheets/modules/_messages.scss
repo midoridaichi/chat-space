@@ -79,16 +79,18 @@
     .edit-btn{
       display: block;
       border: 1px solid #38AEF0;
-      color: #38AEF0;
       height: 40px;
       line-height: 40px;
       margin-top: 28px;
       margin-right: 40px;
       padding: 0 20px;
-      text-decoration: none;
+      
     }
 
-    .main-edit__btn{}
+    .main-edit__btn{
+      text-decoration: none;
+      color:#38AEF0 ;
+    }
 
 
 
@@ -162,11 +164,12 @@
       width: 100%;
       }
     
+    
     .input-message{
       border:none;
       height: 50px;
       width: 100%;
-      padding: 0 45px 0 15px;
+      padding: 0 10px 0 15px;
       position: relative;}
     
     .send-btn{ 
@@ -184,7 +187,7 @@
 
     .input-picture{
       position: absolute;
-      right:55px;
+      right:10px;
       top:5px;
       font-size: 25px;
       }
@@ -202,5 +205,6 @@
       padding: 0 30px;
       }
 
-    .hoge{display: none;
+    .hoge{
+      display: none;
       }

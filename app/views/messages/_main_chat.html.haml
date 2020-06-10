@@ -6,7 +6,7 @@
         %ul.member-list Member : 
         %li.member midori
     .edit-btn
-      =link_to "#", class: "main-edit__btn" do
+      =link_to "/#", class:"main-edit__btn" do
         Edit
   .message-list
     .message-box
@@ -22,17 +22,16 @@
         .message-name
           ユーザーネーム
         .date
-          2020年06月09日　14時04分
+          2020年06月09日　14時04
       .message
         こんにちわ！
-  .message-form
+  %form.message-form
     .message-input
       .input-message
-        %input.textarea{:placeholder => "Type a message", :type => "text"}
+        %input.textarea{placeholder: "Type a message", type: "text",}
         .input-picture
-          =link_to "#", class: "picture-edit__btn" do
-            %label{:class=>"input-box__image"}
+          %label{class: "input-box__image"}
             %i.fa.fa-image
-            %input{:class =>"hoge", :type => "file", :name => "message[image]", :id => "message_image"}
+            %input{class: "hoge", type: "file", name:"hoge-file[image]", method:"post",enctype:"multipart/form-date"}
     .send-btn
-      %input.submit{:name => "commit", :type => "submit", :value => "SEND"}
+      %input.submit{name: "commit", type: "submit", value: "SEND"}
