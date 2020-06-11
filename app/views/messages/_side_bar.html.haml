@@ -1,14 +1,15 @@
 .side-bar
-  .user-name
+  .side-bar__header
     .username
       ユーザーネーム
     .setting
-      =link_to "#", class: "side-edit__btn" do
-        %i.fa.fa-cog
-      =link_to "#", class: "write__btn" do
+      =link_to "#", class:"write-btn" do
         %i.fa.fa-edit
-  .group-owaku
-    .group-list
+      =link_to "#", class:"side-edit-btn" do
+        %i.fa.fa-cog
+
+  .group-box
+    .group-box__group-list
       グループリスト
-      .message-side
-        まだメッセージがありません
+    .group-box__group-list__message-side
+      まだメッセージがありません

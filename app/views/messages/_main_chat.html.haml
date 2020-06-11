@@ -2,26 +2,25 @@
   .right-header
     .group-info
       グループのインフォメーション
-      .list-owaku
-        %ul.member-list Member : 
-        %li.member midori
+      .list-box
+        %ul.list-box__list member:
+        %li.list__member midori
     .edit-btn
       =link_to "/#", class:"main-edit__btn" do
         Edit
   .message-list
     .message-box
       .message-info
-        .message-name
+        .message-info__message-name
           ユーザーネーム
-        .date
+        .message-info__message-name__date
           2020年06月09日　14時04分
       .message
         こんにちわ！
-    .message-box
       .message-info
-        .message-name
+        .message-info__message-name
           ユーザーネーム
-        .date
+        .message-info__message-name__date
           2020年06月09日　14時04
       .message
         こんにちわ！
@@ -29,8 +28,8 @@
     .message-input
       .input-message
         %input.textarea{placeholder: "Type a message", type: "text",}
-        .input-picture
-          %label{class: "input-box__image"}
+        .textarea__input-picture
+          %label{class: "input-picture-image"}
             %i.fa.fa-image
             %input{class: "hoge", type: "file", name:"hoge-file[image]", method:"post",enctype:"multipart/form-date"}
     .send-btn
