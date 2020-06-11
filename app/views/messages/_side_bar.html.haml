@@ -1,11 +1,11 @@
 .side-bar
   .side-bar__header
     .username
-      ユーザーネーム
+      = current_user.name
     .setting
       =link_to "#", class:"write-btn" do
         %i.fa.fa-edit
-      =link_to "#", class:"side-edit-btn" do
+      =link_to edit_user_path(current_user), class:"side-edit-btn" do
         %i.fa.fa-cog
 
   .group-box
