@@ -42,8 +42,10 @@
         .write-btn{ color:#ffffff;
             padding-right: 5px;
           }
+
+     
         
-    
+  
     .main-chat{
     background-color: #ffffff;
     width:calc(100vw - 300px);
@@ -56,7 +58,6 @@
       font-size: 20px;
       color: #333333; 
     }
-
    
     .group-box{
       margin:20px 20px 0px 20px;
@@ -64,13 +65,16 @@
       padding-bottom: 40px;
         &__group-list{
         font-size: 15px;
+        color: #ffffff;;
         &__message-side{
         color: #ffffff;
-        font-size: 11px;
+        font-size: 10px;
         margin-bottom: 46px;
+        text-decoration: none;
         }
       }
     }
+
     .right-header{
       display: flex;
       justify-content: space-between;
@@ -104,6 +108,10 @@
       list-style: none;
       font-size: 12px;
       color: #999999;
+      &__list{display: flex;
+      &__member{padding-left: 5px;
+      }
+    }
     }
       .message-list{
       background-color: #fafafa;
@@ -135,11 +143,14 @@
       font-size: 14px;
       padding-top: 5px;
       background-color: #fafafa;
+      text-decoration: none;
+      &__content{text-decoration: none;
+      color: #fff;}
     }
 
 
 
-    .message-form{
+    .Footer{
       background-color: #d2d2d2;
       width:calc(100vw - 300px);
       height:90px;
@@ -149,14 +160,14 @@
       align-items: center;
       }
 
-    .message-input{
+    .Form{
       display: flex;
       height: 50px;
       width: 100%;
       }
     
     
-    .input-message{
+    .contents{
       border:none;
       height: 50px;
       width: 100%;
@@ -169,17 +180,16 @@
       height:50px;
       display: block;
       border: none;
-      margin:0px 0px 0px 10px;
-        &__input-picture{
+      margin:0px 0px 0px 10px;}
+      
+        .picture{
         position: absolute;
         right:10px;
-        top:5px;
+        top:10px;
         font-size: 25px; 
-      } 
     }
       .input-picture-image{
         height: 50px;
-        position: absolute;
         right: 10px;
       }
     
@@ -192,6 +202,10 @@
       padding: 0 30px;
       }
 
-    .delete-file-view{
+    .hidden{
       display: none;
       }
+
+    .checkbox{
+      padding-left: 100px;
+    }

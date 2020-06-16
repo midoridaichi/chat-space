@@ -3,13 +3,15 @@
     .username
       = current_user.name
     .setting
-      =link_to "#", class:"write-btn" do
+      =link_to new_group_path(), class:"write-btn" do
         %i.fa.fa-edit
       =link_to edit_user_path(current_user), class:"side-edit-btn" do
         %i.fa.fa-cog
-
   .group-box
-    .group-box__group-list
-      グループリスト
-    .group-box__group-list__message-side
-      まだメッセージがありません
+    - current_user.groups.each do |group|
+      = link_to group_messages_path(group.id) do
+        .group-box__group-list
+          = group.name
+        .group-box__group-list__message-side
+          = link_to group_messages_path(group) do
+            = group.show_last_message

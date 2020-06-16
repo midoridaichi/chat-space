@@ -1,14 +1,18 @@
 .main-chat
   .right-header
     .group-info
-      グループのインフォメーション
+      = @group.name
       .list-box
-        %ul.list-box__list member:
-        %li.list__member midori
+        member:
+        %ul.list-box__list
+          - @group.users.each do |user| 
+            %li.list-box__list__member=user.name
     .edit-btn
-      =link_to "/#", class:"main-edit__btn" do
+      =link_to edit_group_path(@group), class:"main-edit__btn" do
         Edit
+        .Edit
   .message-list
+    = render @messages
     .message-box
       .message-info
         .message-info__message-name
@@ -24,13 +28,15 @@
           2020年06月09日　14時04
       .message
         こんにちわ！
-  %form.message-form
-    .message-input
-      .input-message
-        %input.textarea{placeholder: "Type a message", type: "text",}
-        .textarea__input-picture
-          %label{class: "input-picture-image"}
-            %i.fa.fa-image
-            %input{class: "delete-file-view", type: "file", name:"delete-file-view[image]", method:"post",enctype:"multipart/form-date"}
-    .send-btn
-      %input.submit{name: "commit", type: "submit", value: "SEND"}
+  
+  
+  .Footer
+    = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
+      .contents
+        = f.text_field :content, class: 'textarea', placeholder: 'type a message'
+        = f.label :image, class: 'input-picture-image' do
+          = icon('far', 'image', class: 'picture')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'submit'
+
+  
