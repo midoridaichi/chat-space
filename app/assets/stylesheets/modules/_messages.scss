@@ -16,8 +16,7 @@
       height:100px;
       padding:0 0 0 20px;
       display: flex;
-      align-items: center;
-    }
+      align-items: center;    }
   }    
       .username{
         height: 20px;
@@ -63,18 +62,18 @@
       margin:20px 20px 0px 20px;
       color: #ffffff;
       padding-bottom: 40px;
+      overflow: scroll;
         &__group-list{
         font-size: 15px;
         color: #ffffff;;
-        &__message-side{
-        color: #ffffff;
-        font-size: 10px;
-        margin-bottom: 46px;
-        text-decoration: none;
+          &--message-side{
+          color: #ffffff;
+          font-size: 10px;
+          margin-bottom: 46px;
+          text-decoration: none;
         }
       }
-    }
-
+    } 
     .right-header{
       display: flex;
       justify-content: space-between;
@@ -117,6 +116,7 @@
       background-color: #fafafa;
       height:calc(100vh - 190px);
       width:calc(100vw - 300px);
+      overflow: scroll;
       }
       .message-box{
       margin:0px 0px 0px 40px;
