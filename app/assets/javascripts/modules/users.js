@@ -1,7 +1,7 @@
 $(function() {
   function addUser(user) {
     let html = `
-                <div class="ChatMember">
+                <div class="ChatMember clearfix">
                   <p class="ChatMember__name">${user.name}</p>
                   <div class="ChatMember__add ChatMember__button" data-user-id="${user.id}" data-user-name="${user.name}">追加</div>
                 </div>
@@ -11,7 +11,7 @@ $(function() {
 
   function addNoUser() {
     let html = `
-                <div class="ChatMember">
+                <div class="ChatMember clearfix">
                   <p class="ChatMember__name">ユーザーが見つかりません</p>
                 </div>
                 `;
@@ -50,13 +50,13 @@ $(function() {
       }
     })
     .fail(function() {
-      alert("通信エラーです。ユーザーが表示できません。");
+      alert("通信エラーです。ユーザが表示できません。");
     });
   });
-  $("#UserSearchResult").on("click", ".ChatMember__add", function() {
+  $("body").on('click', ".ChatMember__button", function(){
     const userName = $(this).attr("data-user-name");
     const userId = $(this).attr("data-user-id");
-    $(this).parent().remove();
+    $(this).parent().remove()
     addMember(userName, userId);
   });
   $(".ChatMembers").on("click", ".ChatMember__remove", function() {

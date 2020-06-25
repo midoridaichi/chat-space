@@ -1,17 +1,21 @@
 .side-bar
-  .side-bar__header
-    .username
-      = current_user.name
-    .setting
-      =link_to new_group_path(), class:"write-btn" do
-        %i.fa.fa-edit
-      =link_to edit_user_path(current_user), class:"side-edit-btn" do
-        %i.fa.fa-cog
-  .group-box
+  .side-bar__user-name
+    .name-box
+      .name
+        = current_user.name
+      .menu
+        %ul.list
+          %li.side-bar__icon
+            = link_to new_group_path do
+              = icon('fas', 'edit', class: "icon")
+          %li.side-bar__icon
+            = link_to edit_user_path(current_user) do
+              = icon('fas', 'cog', class: "icon")
+  .side-bar__group-list
     - current_user.groups.each do |group|
-      = link_to group_messages_path(group.id) do
-        .group-box__group-list
-          = group.name
-        .group-box__group-list--message-side
-          = link_to group_messages_path(group) do
+      .group
+        = link_to group_messages_path(group) do
+          .group__name
+            = group.name
+          .group__message 
             = group.show_last_message
